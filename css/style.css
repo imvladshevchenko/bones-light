@@ -36,6 +36,7 @@ ul {
 body {
   font-size: 1vw;
   background-color: #f5f9ff;
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -53,6 +54,7 @@ section {
   position: absolute;
   top: -4.7em;
   right: 0;
+  z-index: -10;
   width: 66em;
 }
 .background2 {
@@ -60,7 +62,7 @@ section {
   top: 38.1em;
   right: 0;
   z-index: -10;
-  width: 99em;
+  width: 100em;
 }
 .background3 {
   position: absolute;
@@ -83,7 +85,7 @@ section {
 .coin11 {
   position: absolute;
   z-index: 10;
-} 
+}
 .coin1 {
   width: 8em;
   top: 46.9em;
@@ -379,4 +381,245 @@ section {
   transform: translateY(-50%);
   left: 36.4em;
 }
-
+.background4 {
+  display: none;
+}
+.start__list-img {
+  width: 2.5em;
+}
+@media (max-width: 500px) {
+  .header {
+    padding: 6em 0 0 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+  }
+  .logo {
+    width: 17.9em;
+    z-index: 100;
+  }
+  .background1 {
+    top: -11.7em;
+    right: -28em;
+    width: 150em;
+  }
+  .main-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3.8em;
+  }
+  .main-screen__title {
+    font-size: 6.5em;
+    max-width: 9em;
+    text-align: center;
+    margin-bottom: 0.6em;
+  }
+  .main-screen__text {
+    font-size: 4.3em;
+    text-align: center;
+  }
+  .background-wrapper {
+    position: absolute;
+    overflow-x: hidden;
+    left: 0;
+    right: 0em;
+    top: -10em;
+    height: 81em;
+  }
+  .button {
+    font-size: 3.9em;
+    padding: 1.2em 3.3em;
+  }
+  .button:hover {
+    color: #3d3d3d;
+    background-color: #ffbc15;
+  }
+  .main-screen__img {
+    width: 92.5em;
+    top: 48.6em;
+    right: 0;
+  }
+  .main-screen {
+    margin-bottom: 88.2em;
+  }
+  .title {
+    font-size: 6em;
+    margin-bottom: 0.8em;
+  }
+  .text {
+    font-size: 3.75em;
+  }
+  .bonus__list {
+    width: 100%;
+    flex-direction: column;
+  }
+  main {
+    padding: 0 3.75em;
+    margin-bottom: 25.5em;
+  }
+  .bonus__list-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 11.2em;
+  }
+  .bonus__list-item:last-child {
+    margin-bottom: 3.2em;
+  }
+  .bonus__img {
+    width: 45.8em;
+    transform: translateY(-5.5em);
+  }
+  .second-img {
+    width: 51.8em;
+    transform: translateY(-6.9em);
+  }
+  .bonus__list-text {
+    margin-top: -0.4em;
+  }
+  .second-img + .bonus__list-text {
+    margin-top: -0.8em;
+  }
+  .bonus__list-title {
+    margin-bottom: 1em;
+  }
+  .bonus {
+    margin-bottom: 11.9em;
+  }
+  .background-wrapper1 {
+    position: absolute;
+    overflow-x: hidden;
+    left: 0;
+    right: 0;
+    top: 139em;
+    height: 160em;
+  }
+  .background2 {
+    top: 0;
+    right: 0;
+    left: -19em;
+    z-index: -10;
+    width: 279em;
+  }
+  .start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start__list {
+    width: 100%;
+    max-width: none;
+  }
+  .start__list-img {
+    width: 6.2em;
+  }
+  .start__img-wrapper {
+    width: 12.8em;
+    height: 12.8em;
+  }
+  .start__list-item:not(:last-child) {
+    margin-bottom: 3em;
+  }
+  .start__list {
+    margin-bottom: 65em;
+  }
+  .start__img {
+    right: 0;
+    top: 66em;
+    width: 92.2em;
+  }
+  .background3 {
+    display: none;
+  }
+  .background4 {
+    position: absolute;
+    bottom: -10em;
+    right: 4em;
+    z-index: -10;
+    width: 91em;
+  }
+  .start__arrow {
+    width: 12.5em;
+  }
+  .arrow1 {
+    right: 12em;
+    top: 5.4em;
+  }
+  .arrow2 {
+    right: 33.7em;
+    top: 6.4em;
+  }
+  .footer {
+    padding-top: 9.5em;
+  }
+  .footer__text {
+    max-width: 24em;
+    margin-bottom: 1.1em;
+  }
+  .footer__rights {
+    font-size: 3.2em;
+  }
+  .footer__numbers-wrapper {
+    height: 19.2em;
+    width: 90.6em;
+    margin-bottom: 6em;
+  }
+  .numbers {
+    height: 7.7em;
+  }
+  .numbers:not(:last-child) {
+    margin-right: 1.7em;
+  }
+  .footer__numbers2 {
+    left: 26.9em;
+  }
+  .footer__numbers3 {
+    left: 46.7em;
+  }
+  .footer__numbers4 {
+    left: 65.4em;
+  }
+  .footer__button {
+    margin-bottom: 6em;
+  }
+  .coin11 {
+    width: 6.5em;
+    top: 133.5em;
+    left: 93em;
+  }
+  .coin2 {
+    width: 8em;
+    top: 139.1em;
+    left: 2em;
+  }
+  .coin9 {
+    width: 19em;
+    top: 296.5em;
+    left: -3em;
+  }
+  .coin10 {
+    width: 9em;
+    top: 356.5em;
+    left: 87em;
+  }
+  .coin6 {
+    width: 9.7em;
+    top: 450em;
+    left: 84.2em;
+  }
+  .coin1 {
+    width: 18em;
+    top: 448.9em;
+    left: 0em;
+  }
+  .coin3 {
+    width: 7em;
+    top: 533.5em;
+    left: 10em;
+  }
+  .coin4,
+  .coin7,
+  .coin8  {
+    display: none;
+  }
+}
