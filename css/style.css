@@ -537,6 +537,7 @@ section {
     right: 4em;
     z-index: -10;
     width: 91em;
+    display: block;
   }
   .start__arrow {
     width: 12.5em;
