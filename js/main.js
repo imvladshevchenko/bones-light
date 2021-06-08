@@ -31,8 +31,6 @@ function firstNumberAnimation() {
     i++;
     if (i < 2) {
       firstNumberAnimation();
-    } else if (i == 2) {
-      secondNumberAnimation();
     }
   }, 150);
 }
@@ -44,8 +42,6 @@ function secondNumberAnimation() {
     j++;
     if (j < 4) {
       secondNumberAnimation();
-    } else if (j == 4) {
-      thirdNumberAnimation();
     }
   }, 150);
 }
@@ -57,8 +53,6 @@ function thirdNumberAnimation() {
     k++;
     if (k < 5) {
       thirdNumberAnimation();
-    } else if (k == 5) {
-      fourthNumberAnimation();
     }
   }, 150);
 }
@@ -70,12 +64,11 @@ function fourthNumberAnimation() {
     d++;
     if (d < 4) {
       fourthNumberAnimation();
-    } else if (d == 4) {
-      fifthNumberAnimation();
     }
   }, 150);
 }
 
+let isSlowCountingCalled = false;
 let t = 1;
 function fifthNumberAnimation() {
   setTimeout(function () {
@@ -83,8 +76,9 @@ function fifthNumberAnimation() {
     t++;
     if (t < 9) {
       fifthNumberAnimation();
-    } else if (t == 9) {
-      sixthNumberAnimation();
+    } else if (t == 9 && isSlowCountingCalled == false) {
+      slowCounting1();
+      isSlowCountingCalled = true;
     }
   }, 150);
 }
@@ -96,8 +90,6 @@ function sixthNumberAnimation() {
     g++;
     if (g < 2) {
       sixthNumberAnimation();
-    } else if (g == 2) {
-      seventhNumberAnimation();
     }
   }, 150);
 }
@@ -109,8 +101,6 @@ function seventhNumberAnimation() {
     s++;
     if (s < 8) {
       seventhNumberAnimation();
-    } else if (s == 8) {
-      eighthNumberAnimation();
     }
   }, 150);
 }
@@ -122,8 +112,6 @@ function eighthNumberAnimation() {
     l++;
     if (l < 8) {
       eighthNumberAnimation();
-    } else if (l == 8) {
-      ninthNumberAnimation();
     }
   }, 150);
 }
@@ -135,8 +123,6 @@ function ninthNumberAnimation() {
     b++;
     if (b < 2) {
       ninthNumberAnimation();
-    } else if (b == 2) {
-      slowCounting1();
     }
   }, 150);
 }
@@ -168,7 +154,7 @@ function slowCounting2() {
       slowCounting3();
       functionCall2 = true;
     }
-  }, 3000);
+  }, 1500);
 }
 let functionCall3 = false;
 function slowCounting3() {
@@ -182,7 +168,7 @@ function slowCounting3() {
       slowCounting4();
       functionCall3 = true;
     }
-  }, 6000);
+  }, 3000);
 }
 let functionCall4 = false;
 function slowCounting4() {
@@ -196,7 +182,7 @@ function slowCounting4() {
       slowCounting5();
       functionCall4 = true;
     }
-  }, 9000);
+  }, 4500);
 }
 let functionCall5 = false;
 function slowCounting5() {
@@ -211,7 +197,7 @@ function slowCounting5() {
       slowCounting6();
       functionCall5 = true;
     }
-  }, 12000);
+  }, 6000);
 }
 let functionCall6 = false;
 function slowCounting6() {
@@ -225,7 +211,7 @@ function slowCounting6() {
       slowCounting7();
       functionCall6 = true;
     }
-  }, 15000);
+  }, 7500);
 }
 let functionCall7 = false;
 function slowCounting7() {
@@ -239,7 +225,7 @@ function slowCounting7() {
       slowCounting8();
       functionCall7 = true;
     }
-  }, 18000);
+  }, 9000);
 }
 let functionCall8 = false;
 function slowCounting8() {
@@ -253,7 +239,7 @@ function slowCounting8() {
       slowCounting9();
       functionCall8 = true;
     }
-  }, 21000);
+  }, 10500);
 }
 function slowCounting9() {
   setInterval(() => {
@@ -262,13 +248,25 @@ function slowCounting9() {
     if (i == 10) {
       i = 0;
     }
-  }, 24000);
+  }, 12000);
 }
+
+function callFunction() {
+  firstNumberAnimation(),
+  secondNumberAnimation(),
+  thirdNumberAnimation(),
+  fourthNumberAnimation(),
+  fifthNumberAnimation(),
+  sixthNumberAnimation(),
+  seventhNumberAnimation(),
+  eighthNumberAnimation(),
+  ninthNumberAnimation()
+};
 
 let isEventTriggered = false;
 document.addEventListener("aos:in:super-duper", () => {
   if (isEventTriggered == false) {
-    setTimeout(firstNumberAnimation, 300);
+    setTimeout(callFunction, 600);
     isEventTriggered = true;
   }
 });
