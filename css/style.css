@@ -42,12 +42,12 @@ body {
 
 main {
   position: relative;
-  padding: 0 10.4em;
   margin-bottom: 12.5em;
 }
 
 section {
   z-index: 10;
+  padding: 0 10.4em;
 }
 
 .background1 {
@@ -206,7 +206,7 @@ section {
   position: absolute;
   width: 52.5em;
   top: -4.4em;
-  right: -10.4em;
+  right: 0.6em;
 }
 
 .bonus {
@@ -214,6 +214,8 @@ section {
   flex-direction: column;
   align-items: center;
   margin-bottom: 7.9em;
+  overflow-x: hidden;
+  padding: 0;
 }
 .bonus__text {
   margin-bottom: 3.3em;
@@ -302,7 +304,7 @@ section {
 }
 .start__img {
   position: absolute;
-  right: -2em;
+  right: 8em;
   top: 0em;
   width: 43.2em;
 }
@@ -438,7 +440,8 @@ section {
   .main-screen__img {
     width: 92.5em;
     top: 48.6em;
-    right: 0;
+    right: 50%;
+    transform: translateX(50%);
   }
   .main-screen {
     margin-bottom: 88.2em;
@@ -453,10 +456,14 @@ section {
   .bonus__list {
     width: 100%;
     flex-direction: column;
+    padding: 0 3.75em;
   }
   main {
-    padding: 0 3.75em;
+    padding: 0;
     margin-bottom: 25.5em;
+  }
+  section {
+        padding: 0 3.75em;
   }
   .bonus__list-item {
     width: 100%;
@@ -485,6 +492,7 @@ section {
   }
   .bonus {
     margin-bottom: 11.9em;
+    padding: 0;
   }
   .background-wrapper1 {
     position: absolute;
@@ -524,7 +532,8 @@ section {
     margin-bottom: 65em;
   }
   .start__img {
-    right: 0;
+    right: 50%;
+    transform: translateX(50%);
     top: 66em;
     width: 92.2em;
   }
